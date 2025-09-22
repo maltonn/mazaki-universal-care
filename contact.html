@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 馬崎コンサルティング</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+        .faq-item summary {
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            padding-left: 30px;
+        }
+        .faq-item summary::before {
+            content: 'Q.';
+            position: absolute;
+            left: 0;
+            color: #f0a242;
+        }
+        .faq-item p {
+            margin-top: 15px;
+            padding-left: 30px;
+            line-height: 1.8;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">馬崎コンサルティング</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">私たちについて</a></li>
+                <li><a href="services.html">サービス案内</a></li>
+                <li><a href="#">導入事例</a></li>
+            </ul>
+            <a href="contact.html" class="btn-contact">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('imgs/image4.jpg'); height: 400px;">
+            <div class="hero-text">
+                <h2 style="font-size: 36px;">お問い合わせ</h2>
+                <p>Contact</p>
+            </div>
+        </section>
+
+        <section id="faq" class="section-container">
+            <h2 class="section-title">FAQ</h2>
+            <p class="section-subtitle">よくあるご質問</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details class="faq-item">
+                    <summary>どのような施設が対象ですか？</summary>
+                    <p>ホテル、旅館、観光案内所、交通機関など、観光に関連するあらゆる施設が対象となります。規模の大小は問いません。お気軽にご相談ください。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>認定取得まで、どのくらいの期間がかかりますか？</summary>
+                    <p>施設の現状や規模によって異なりますが、一般的には3ヶ月〜6ヶ月程度が目安となります。初回ヒアリングの際に、詳細なスケジュールをご提示します。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>地方の施設でもサポートは可能ですか？</summary>
+                    <p>はい、全国対応しております。オンラインでの打ち合わせを基本とし、必要に応じて現地へもお伺いしますので、遠方の事業者様もお気軽にお問い合わせください。</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="contact-form" class="section-container" style="background-color: #f9f9f9;">
+            <h2 class="section-title">Contact Form</h2>
+            <p class="section-subtitle">お問い合わせフォーム</p>
+            <form style="max-width: 700px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">会社名・施設名</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <button type="submit" class="btn-contact" style="border: none; cursor: pointer; font-size: 16px;">送信する</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logo">
+            <h1><a href="index.html">馬崎コンサルティング</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">私たちについて</a></li>
+                <li><a href="services.html">サービス案内</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+                <li><a href="sitemap_page.html">サイトマップ</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">&copy; 2025 馬崎コンサルティング. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

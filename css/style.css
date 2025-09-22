@@ -1,0 +1,299 @@
+/* 基本設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-container {
+    padding: 80px 5%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #f0a242;
+    margin: 10px 0 60px 0;
+    font-weight: bold;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: absolute;
+    width: calc(100% - 80px);
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ddd;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #ddd;
+    font-weight: 500;
+}
+
+header .btn-contact {
+    background-color: #f0a242;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+/* メインビジュアル (Hero) */
+.hero {
+    background-image: url('./img/hero-background.png');
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+}
+
+.hero-text {
+    color: white;
+    margin-left: -20%; /* テキストを少し左に寄せる */
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.free-consultation {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.free-consultation p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.free-consultation span {
+    display: inline-block;
+    background-color: #f0a242;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Aboutセクション */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image img {
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.about-text h3 span {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.about-text .profile-title {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.about-text .profile-description {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Worksセクション */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.work-item {
+    text-align: left;
+}
+
+.work-item img {
+    width: 100%;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.work-item p {
+    font-size: 14px;
+    margin: 15px 0 5px 0;
+}
+
+.work-item h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.work-item a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #f0a242;
+    border-bottom: 1px solid #f0a242;
+}
+
+/* Serviceセクション */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.service-item img {
+    height: 60px;
+    width: auto;
+}
+
+.service-item h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+.service-item p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.service-item .price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.service-item .price strong {
+    font-size: 28px;
+    color: #f0a242;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+footer .logo h1 {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: white;
+}
+
+footer .copyright {
+    font-size: 12px;
+    margin: 0;
+}
