@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ | 馬崎コンサルティング</title>
+    <title>UNIVERSALCARE CONSULTING | お問い合わせ</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 20px 0;
+            margin-bottom: 30px;
         }
-        .faq-item summary {
+        .faq-q {
             font-weight: bold;
-            cursor: pointer;
-            position: relative;
-            padding-left: 30px;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
-        .faq-item summary::before {
-            content: 'Q.';
-            position: absolute;
-            left: 0;
-            color: #f0a242;
+        .faq-q span {
+            background-color: #f0a242;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
         }
-        .faq-item p {
-            margin-top: 15px;
-            padding-left: 30px;
+        .faq-a {
+            padding-left: 45px;
             line-height: 1.8;
         }
+
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .form-group label {
             display: block;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .form-group input, .form-group textarea {
             width: 100%;
@@ -45,19 +44,31 @@
         .form-group textarea {
             height: 150px;
         }
+        .submit-btn {
+            background-color: #f0a242;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            margin: 40px auto 0;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <h1><a href="index.html">馬崎コンサルティング</a></h1>
+            <h1><a href="index.html">UNIVERSALCARE CONSULTING</a></h1>
         </div>
         <nav>
             <ul>
                 <li><a href="about.html">私たちについて</a></li>
                 <li><a href="services.html">サービス案内</a></li>
-                <li><a href="#">導入事例</a></li>
+                <li><a href="price.html">料金プラン</a></li>
             </ul>
             <a href="contact.html" class="btn-contact">お問い合わせ</a>
         </nav>
@@ -67,26 +78,23 @@
         <section class="hero" style="background-image: url('imgs/image4.jpg'); height: 400px;">
             <div class="hero-text">
                 <h2 style="font-size: 36px;">お問い合わせ</h2>
-                <p>Contact</p>
             </div>
         </section>
 
         <section id="faq" class="section-container">
             <h2 class="section-title">FAQ</h2>
             <p class="section-subtitle">よくあるご質問</p>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <details class="faq-item">
-                    <summary>どのような施設が対象ですか？</summary>
-                    <p>ホテル、旅館、観光案内所、交通機関など、観光に関連するあらゆる施設が対象となります。規模の大小は問いません。お気軽にご相談ください。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>認定取得まで、どのくらいの期間がかかりますか？</summary>
-                    <p>施設の現状や規模によって異なりますが、一般的には3ヶ月〜6ヶ月程度が目安となります。初回ヒアリングの際に、詳細なスケジュールをご提示します。</p>
-                </details>
-                <details class="faq-item">
-                    <summary>地方の施設でもサポートは可能ですか？</summary>
-                    <p>はい、全国対応しております。オンラインでの打ち合わせを基本とし、必要に応じて現地へもお伺いしますので、遠方の事業者様もお気軽にお問い合わせください。</p>
-                </details>
+            <div class="faq-item">
+                <p class="faq-q"><span>Q</span>初期投資・改修費用はどのくらいかかりますか？</p>
+                <p class="faq-a">バリアフリー通路やトイレの整備には一定の費用が発生しますが、国や自治体の補助金・助成金を活用して費用を軽減することが可能です。計画的に段階的な改修を行うことで、負担を分散させるご提案もしております。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q"><span>Q</span>専門的な人材がいなくても対応できますか？</p>
+                <p class="faq-a">はい、問題ありません。私たちの研修プログラムを通じて、スタッフの皆様が必要な知識とスキルを習得できるよう支援します。助成制度により研修費用を補助することも可能ですので、人材育成にかかるコストを抑えられます。</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-q"><span>Q</span>投資を回収するまでに時間がかかりますか？</p>
+                <p class="faq-a">短期的に売上に直結しないケースもありますが、認定取得をPRすることで、将来の高齢化やインバウンド需要の増加を背景に「選ばれる施設」としての競争優位性を確立できます。高付加価値層の獲得により、長期的な収益機会の拡大が期待できます。</p>
             </div>
         </section>
 
@@ -96,42 +104,37 @@
             <form style="max-width: 700px; margin: 0 auto;">
                 <div class="form-group">
                     <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="company">会社名・施設名</label>
-                    <input type="text" id="company" name="company">
+                    <input type="text" id="name" name="name">
                 </div>
                 <div class="form-group">
                     <label for="email">メールアドレス</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="message">お問い合わせ内容</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message"></textarea>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <button type="submit" class="btn-contact" style="border: none; cursor: pointer; font-size: 16px;">送信する</button>
-                </div>
+                <button type="submit" class="submit-btn">送信</button>
             </form>
         </section>
 
     </main>
 
-    <footer>
+    <footer style="background-color: #333; color: white; padding: 40px 5%; text-align: center;">
         <div class="logo">
-            <h1><a href="index.html">馬崎コンサルティング</a></h1>
+            <h1 style="font-size: 20px; margin: 0 0 20px 0;"><a href="index.html">UNIVERSALCARE CONSULTING</a></h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="about.html">私たちについて</a></li>
-                <li><a href="services.html">サービス案内</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-                <li><a href="privacy.html">プライバシーポリシー</a></li>
-                <li><a href="sitemap_page.html">サイトマップ</a></li>
+            <ul style="display: flex; justify-content: center; list-style: none; padding: 0; margin: 0 0 20px 0;">
+                <li style="margin: 0 15px;"><a href="about.html">私たちについて</a></li>
+                <li style="margin: 0 15px;"><a href="services.html">サービス案内</a></li>
+                <li style="margin: 0 15px;"><a href="price.html">料金プラン</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html">お問い合わせ</a></li>
+                <li style="margin: 0 15px;"><a href="privacy.html">プライバシーポリシー</a></li>
+                <li style="margin: 0 15px;"><a href="sitemap_page.html">サイトマップ</a></li>
             </ul>
         </nav>
-        <p class="copyright">&copy; 2025 馬崎コンサルティング. All Rights Reserved.</p>
+        <p style="font-size: 12px; margin: 0;">&copy; 2025 UNIVERSALCARE CONSULTING. All Rights Reserved.</p>
     </footer>
 
 </body>

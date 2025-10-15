@@ -3,81 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>サイトマップ | 馬崎コンサルティング</title>
+    <title>UNIVERSALCARE CONSULTING | サイトマップ</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .sitemap-list {
+            list-style: none;
+            padding-left: 20px;
+            line-height: 2.5;
+        }
+        .sitemap-list ul {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <h1><a href="index.html">馬崎コンサルティング</a></h1>
+            <h1><a href="index.html">UNIVERSALCARE CONSULTING</a></h1>
         </div>
         <nav>
             <ul>
                 <li><a href="about.html">私たちについて</a></li>
                 <li><a href="services.html">サービス案内</a></li>
-                <li><a href="#">導入事例</a></li>
+                <li><a href="price.html">料金プラン</a></li>
             </ul>
             <a href="contact.html" class="btn-contact">お問い合わせ</a>
         </nav>
     </header>
 
     <main>
-        <section class="hero" style="background-image: url('imgs/image4.jpg'); height: 400px;">
+        <section class="hero" style="height: 250px;">
             <div class="hero-text">
                 <h2 style="font-size: 36px;">サイトマップ</h2>
-                <p>Sitemap</p>
             </div>
         </section>
 
-        <section id="sitemap-content" class="section-container">
-            <div style="max-width: 800px; margin: 0 auto; line-height: 2.5;">
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="index.html" style="font-weight: bold; font-size: 18px;">トップページ</a></li>
-                    <li style="margin-top: 20px;">
-                        <a href="about.html" style="font-weight: bold; font-size: 18px;">私たちについて</a>
-                        <ul style="list-style: none; padding-left: 20px; margin-top: 10px;">
-                            <li><a href="about.html#message">代表挨拶</a></li>
-                            <li><a href="about.html#company-profile">会社概要</a></li>
-                        </ul>
-                    </li>
-                    <li style="margin-top: 20px;">
-                        <a href="services.html" style="font-weight: bold; font-size: 18px;">サービス案内</a>
-                        <ul style="list-style: none; padding-left: 20px; margin-top: 10px;">
-                            <li><a href="services.html#service-details">心のバリアフリー認定取得支援</a></li>
-                            <li><a href="services.html#service-details">年次研修プログラム</a></li>
-                            <li><a href="services.html#pricing">料金プラン</a></li>
-                        </ul>
-                    </li>
-                    <li style="margin-top: 20px;">
-                        <a href="contact.html" style="font-weight: bold; font-size: 18px;">お問い合わせ</a>
-                        <ul style="list-style: none; padding-left: 20px; margin-top: 10px;">
-                            <li><a href="contact.html#faq">よくあるご質問</a></li>
-                            <li><a href="contact.html#contact-form">お問い合わせフォーム</a></li>
-                        </ul>
-                    </li>
-                    <li style="margin-top: 20px;"><a href="privacy.html" style="font-weight: bold; font-size: 18px;">プライバシーポリシー</a></li>
-                    <li style="margin-top: 20px;"><a href="sitemap_page.html" style="font-weight: bold; font-size: 18px;">サイトマップ</a></li>
-                </ul>
-            </div>
+        <section id="sitemap" class="section-container">
+            <ul class="sitemap-list">
+                <li><a href="index.html">トップページ</a>
+                    <ul>
+                        <li>心のバリアフリー認定取得支援とは</li>
+                        <li>私たちのできること</li>
+                    </ul>
+                </li>
+                <li><a href="about.html">私たちについて</a>
+                    <ul>
+                        <li>代表挨拶</li>
+                        <li>会社概要</li>
+                    </ul>
+                </li>
+                <li><a href="services.html">サービス案内</a>
+                    <ul>
+                        <li>私たちのできること（詳細）</li>
+                        <li>導入メリット</li>
+                    </ul>
+                </li>
+                <li><a href="price.html">料金プラン</a>
+                    <ul>
+                        <li>料金プラン</li>
+                        <li>導入スケジュールのイメージ</li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">お問い合わせ</a>
+                    <ul>
+                        <li>よくあるご質問 (FAQ)</li>
+                        <li>お問い合わせフォーム</li>
+                    </ul>
+                </li>
+                <li><a href="privacy.html">プライバシーポリシー</a></li>
+                <li><a href="sitemap_page.html">サイトマップ</a></li>
+            </ul>
         </section>
 
     </main>
 
-    <footer>
+    <footer style="background-color: #333; color: white; padding: 40px 5%; text-align: center;">
         <div class="logo">
-            <h1><a href="index.html">馬崎コンサルティング</a></h1>
+            <h1 style="font-size: 20px; margin: 0 0 20px 0;"><a href="index.html">UNIVERSALCARE CONSULTING</a></h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="about.html">私たちについて</a></li>
-                <li><a href="services.html">サービス案内</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-                <li><a href="privacy.html">プライバシーポリシー</a></li>
-                <li><a href="sitemap_page.html">サイトマップ</a></li>
+            <ul style="display: flex; justify-content: center; list-style: none; padding: 0; margin: 0 0 20px 0;">
+                <li style="margin: 0 15px;"><a href="about.html">私たちについて</a></li>
+                <li style="margin: 0 15px;"><a href="services.html">サービス案内</a></li>
+                <li style="margin: 0 15px;"><a href="price.html">料金プラン</a></li>
+                <li style="margin: 0 15px;"><a href="contact.html">お問い合わせ</a></li>
+                <li style="margin: 0 15px;"><a href="privacy.html">プライバシーポリシー</a></li>
+                <li style="margin: 0 15px;"><a href="sitemap_page.html">サイトマップ</a></li>
             </ul>
         </nav>
-        <p class="copyright">&copy; 2025 馬崎コンサルティング. All Rights Reserved.</p>
+        <p style="font-size: 12px; margin: 0;">&copy; 2025 UNIVERSALCARE CONSULTING. All Rights Reserved.</p>
     </footer>
 
 </body>
