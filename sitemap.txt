@@ -1,18 +1,27 @@
-- トップページ (Home)
+- トップページ 
   - キャッチフレーズ「自由と成長のきっかけを提供し、共に新しい可能性を切り拓く。」
-  - サービス概要 (Service Overview)
-  - 導入事例 (Case Studies)
+  - 心のバリアフリー認定取得支援とは 
+  - 私たちのできること
 
-- 私たちについて (About Us)
-  - 代表挨拶 (Message from CEO)
-  - 会社概要 (Company Profile)
+- 私たちについて 
+  - 代表挨拶 
+  - 会社概要 
 
 - サービス案内 (Services)
-  - 心のバリアフリー認定取得支援 (Support for "Kokoro no Barrier-Free" Certification)
-    - 認定制度について (About the Certification System)
-    - 取得のメリット (Benefits of Certification)
-  - 年次研修プログラム (Annual Training Program)
-  - 料金プラン (Pricing)
+  - 心のバリアフリー認定取得支援とは 
+    - 認定制度について
+    - 取得のメリット
+  - 私たちのできること
+    - 現地調査・チェックリスト評価
+    - 職員研修の実施
+    - 設備改善のご提案
+    - 申請書類作成・提出サポート
+  - 導入メリット
+
+
+- 料金プラン (Pricing)
+  - 料金プラン
+  - 導入スケジュールのイメージ
 
 - お問い合わせ (Contact)
   - よくあるご質問 (FAQ)
