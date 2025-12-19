@@ -27,7 +27,7 @@
         .price-table td.price {
             font-weight: bold;
             font-size: 24px;
-            color: #f0a242;
+            color: #F67126;
             text-align: center;
         }
         .price-table ul {
@@ -54,17 +54,26 @@
 <body>
 
     <header>
-        <div class="logo">
-            <h1><a href="index.html">UNIVERSALCARE CONSULTING</a></h1>
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html">UNIVERSALCARE CONSULTING</a></h1>
+            </div>
+            <div class="header-nav-container" id="header-nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="services.html">サービス案内</a></li>
+                        <li><a href="price.html">料金プラン</a></li>
+                    </ul>
+                    <a href="contact.html" class="btn-contact">お問い合わせ</a>
+                </nav>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="about.html">私たちについて</a></li>
-                <li><a href="services.html">サービス案内</a></li>
-                <li><a href="price.html">料金プラン</a></li>
-            </ul>
-            <a href="contact.html" class="btn-contact">お問い合わせ</a>
-        </nav>
+        <button class="hamburger-btn" id="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main>
@@ -77,58 +86,142 @@
         <section id="pricing" class="section-container">
             <h2 class="section-title">Price</h2>
             <p class="section-subtitle">料金プラン</p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">お客様の施設に合わせた最適なプランで、「心のバリアフリー認定」の取得を力強くサポートします。多様なお客様を安心してお迎えするために、専門家がご状況を丁寧に伺い、最適な道筋をご提案します。</p>
+
+            <h3 style="font-size: 24px; text-align: center; margin-bottom: 20px;">料金プランの目安</h3>
+            <p style="text-align: center; margin-bottom: 40px;">施設の規模や目指すゴールに応じて、3つの基本プランをご用意しました。まずは、ご予算の目安として参考価格をご覧ください。</p>
             <table class="price-table">
                 <thead>
                     <tr>
-                        <th>プラン名</th>
-                        <th>対象施設</th>
-                        <th>支援内容</th>
-                        <th>報酬（目安）</th>
+                        <th>施設規模（部屋数の目安）</th>
+                        <th>基礎プラン<br>（ファーストステップ支援）</th>
+                        <th>研修改善プラン<br>（研修＋改善ロードマップ）</th>
+                        <th>安心伴走プラン<br>（認定取得まで総合支援）</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="plan-name">基本プラン</td>
-                        <td>小規模旅館・ホテル向け<br>(部屋数: 10〜30室)</td>
-                        <td><ul><li>現地調査・チェックリスト評価</li><li>改善提案（簡易版）</li><li>簡易職員研修(半日〜1日)</li></ul></td>
-                        <td class="price">約70万円</td>
+                        <td data-label="施設規模">小規模施設（10〜30室）</td>
+                        <td data-label="基礎プラン" class="price">90〜110万円</td>
+                        <td data-label="研修改善プラン" class="price">120〜140万円</td>
+                        <td data-label="安心伴走プラン" class="price">150〜170万円</td>
                     </tr>
                     <tr>
-                        <td class="plan-name">フルサポートプラン</td>
-                        <td>中規模ホテル・旅館向け<br>(部屋数: 30〜80室)</td>
-                        <td><ul><li>現地調査・チェックリスト評価</li><li>改善提案（優先度・費用対効果を考慮）</li><li>実技研修＋座学研修</li><li>申請書類作成・提出サポート</li></ul></td>
-                        <td class="price">約120〜<br>150万円</td>
+                        <td data-label="施設規模">中規模施設（31〜80室）</td>
+                        <td data-label="基礎プラン" class="price">110〜130万円</td>
+                        <td data-label="研修改善プラン" class="price">140〜160万円</td>
+                        <td data-label="安心伴走プラン" class="price">170〜200万円</td>
                     </tr>
                     <tr>
-                        <td class="plan-name">大型施設向け<br>カスタムプラン</td>
-                        <td>大型施設向け<br>(部屋数: 80室以上)</td>
-                        <td>フルサポートプランに加え、追加研修や複雑な改善提案など、施設の規模やニーズに応じた最適なプランを個別にご提案します。</td>
-                        <td class="price">150万円以上</td>
+                        <td data-label="施設規模">大規模施設（81室以上）</td>
+                        <td data-label="基礎プラン" class="price">140〜160万円</td>
+                        <td data-label="研修改善プラン" class="price">170〜210万円</td>
+                        <td data-label="安心伴走プラン" class="price">220〜260万円</td>
                     </tr>
                 </tbody>
             </table>
-            <p style="text-align: center; font-size: 14px; color: #555;">※上記は目安です。施設の規模や状況により変動します。お気軽にお問い合わせください。</p>
+            <p style="text-align: center; font-size: 14px; color: #555; margin-bottom: 60px;">※上記はあくまで目安です。補助金の活用により、実質的なご負担が半額以下になるケースもございます。</p>
+
+            <h3 style="font-size: 24px; text-align: center; margin-bottom: 40px;">プラン内容のご紹介</h3>
+            <div style="max-width: 800px; margin: 0 auto 40px auto;">
+                <div style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-left: 5px solid #F67126;">
+                    <h4 style="font-size: 20px; color: #F67126; margin-bottom: 10px;">基礎プラン（ファーストステップ支援）</h4>
+                    <p style="font-weight: bold;">「何から始めるべきか分からない」「まずは現状を知りたい」という施設様へ</p>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><strong>専門家による現地調査：</strong>法令基準やお客様の目線で、動線・安全性を専門的に診断します。</li>
+                        <li><strong>チェックリスト評価：</strong>観光庁の基準に基づき、現状の強みと課題を客観的に評価します。</li>
+                        <li><strong>写真付き「改善提案レポート（簡易版）」：</strong>具体的な改善イメージを掴んでいただくための、分かりやすいレポートです。</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-left: 5px solid #F67126;">
+                    <h4 style="font-size: 20px; color: #F67126; margin-bottom: 10px;">研修改善プラン（研修＋改善ロードマップ）</h4>
+                    <p style="font-weight: bold;">「施設の改善とスタッフのスキルアップを両立させたい」という施設様へ</p>
+                    <p><strong>「基礎プラン」の全内容に加えて、</strong>以下の支援を行います。</p>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><strong>スタッフ研修（座学＋実技）：</strong>多様なお客様をお迎えするための心構えと実践的なスキルを習得します。</li>
+                        <li><strong>改善ロードマップ作成：</strong>調査結果を基に、優先順位と費用対効果を明確にした具体的な改善計画をご提案します。</li>
+                        <li><strong>補助金活用の方向性整理：</strong>活用可能な補助金制度を調査し、申請に向けたアドバイスを行います。</li>
+                    </ul>
+                </div>
+                <div style="margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-left: 5px solid #F67126;">
+                    <h4 style="font-size: 20px; color: #F67126; margin-bottom: 10px;">安心伴走プラン（認定取得まで総合支援）</h4>
+                    <p style="font-weight: bold;">「専門家と連携し、着実に認定を取得したい」という施設様向けの最上位プラン</p>
+                    <p><strong>「研修改善プラン」の全内容に加えて、</strong>認定取得までをトータルで支援します。</p>
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><strong>申請書類の作成支援：</strong>お忙しい皆様に代わり、実質的な代行レベルで質の高い申請書類を作成します。</li>
+                        <li><strong>証跡整理の最適化：</strong>認定に必要な証跡写真や行政への提出資料を、効果的に整理・作成します。</li>
+                        <li><strong>認定後の活用アドバイス：</strong>取得した認定を、広報やサービス向上にどう活かすかまでご提案します。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background-color: #f9f9f9; padding: 30px; max-width: 800px; margin: 0 auto 60px auto; border-radius: 5px;">
+                <h3 style="font-size: 22px; text-align: center; margin-bottom: 20px;">料金が施設ごとに異なる理由</h3>
+                <p>当社の料金が個別見積りなのは、お客様に無駄なご負担をおかけしないためです。施設の広さや構造、スタッフ様の人数、そして目指されるゴールの高さによって、必要なサポートは大きく異なります。一つひとつの施設に最適化したプランを丁寧にご提案することで、費用対効果の高い支援の実現をお約束します。</p>
+            </div>
+
+            <div style="background-color: #fff; border: 2px solid #F67126; padding: 30px; text-align: center; max-width: 800px; margin: 0 auto;">
+                <h3 style="font-size: 24px; color: #F67126; margin-bottom: 15px;">「まず、何から始めるべき？」<br>専門家が無料でご相談に乗ります</h3>
+                <p style="margin-bottom: 20px;">10分程度の簡単なヒアリングで、貴施設に最適なプランや費用の目安が明確になります。</p>
+                <ul style="list-style: none; padding: 0; margin: 0 auto 20px auto; display: inline-block; text-align: left;">
+                    <li style="margin-bottom: 10px;">✓ 「うちの施設の場合はいくら？」が具体的に分かる</li>
+                    <li style="margin-bottom: 10px;">✓ 強引な営業は一切ありません</li>
+                    <li style="margin-bottom: 10px;">✓ 認定取得までの最短ルートをご提案します</li>
+                </ul>
+                <br>
+                <a href="contact.html" class="btn-contact" style="display: inline-block; text-decoration: none; margin-top: 10px;">無料で相談してみる</a>
+            </div>
         </section>
 
         <section id="schedule" class="section-container" style="background-color: #f9f9f9;">
             <h2 class="section-title">Schedule</h2>
-            <p class="section-subtitle">導入スケジュールのイメージ</p>
+            <p class="section-subtitle">導入スケジュールの目安</p>
             <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">ステップ</th>
+                        <th>主な内容</th>
+                        <th style="width: 15%;">期間目安</th>
+                        <th style="width: 25%;">プラン別対応</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <th>1ヶ月目</th>
-                        <td><strong>現地調査・チェックリスト評価</strong><br>認定基準に基づき、施設のハード面（客室、浴室、通路など）とソフト面（接遇、案内表示など）を総合的に評価し、課題の抽出と改善点の整理を行います。</td>
+                        <td data-label="ステップ"><strong>STEP1</strong><br>現地調査・基礎評価</td>
+                        <td data-label="主な内容">・ハード面（設備）とソフト面（サービス）の総合評価<br>・施設の強みと課題の整理<br>・ご予算と状況に合わせた改善方針の決定</td>
+                        <td data-label="期間目安">2〜4週間</td>
+                        <td data-label="プラン別対応">
+                            基礎: 〇<br>
+                            改善: ◎<br>
+                            伴走: ◎
+                        </td>
                     </tr>
                     <tr>
-                        <th>2ヶ月目</th>
-                        <td><strong>改善提案・職員研修の実施</strong><br>評価結果に基づき、優先度や費用対効果を考慮した改善策を提案します。並行して、実践的な職員研修を実施し、スタッフ全体の対応力と意識統一を図ります。</td>
+                        <td data-label="ステップ"><strong>STEP2</strong><br>改善提案・職員研修</td>
+                        <td data-label="主な内容">・具体的な改善策と優先順位のご提案<br>・スタッフ研修（座学＋実践）の実施<br>・案内表示や動線計画の改善支援</td>
+                        <td data-label="期間目安">数週間〜1.5か月</td>
+                        <td data-label="プラン別対応">
+                            基礎: △<br>
+                            改善: 〇<br>
+                            伴走: ◎
+                        </td>
                     </tr>
                     <tr>
-                        <th>3ヶ月目</th>
-                        <td><strong>申請書類作成・認定取得</strong><br>改善の進捗を反映した申請書類の作成をサポートし、オーナー様による申請手続きを円滑に進めます。短期間での認定取得を目指します。</td>
+                        <td data-label="ステップ"><strong>STEP3</strong><br>申請書作成・認定取得</td>
+                        <td data-label="主な内容">・申請書類作成の包括的サポート<br>・アピール材料となる写真や資料の整理<br>・認定取得まで責任を持って伴走</td>
+                        <td data-label="期間目安">1〜3か月</td>
+                        <td data-label="プラン別対応">
+                            基礎: —<br>
+                            改善: △<br>
+                            伴走: ◎
+                        </td>
                     </tr>
                 </tbody>
             </table>
+             <div style="margin-top: 20px; font-size: 14px; text-align: center; max-width: 90%; margin-left: auto; margin-right: auto;">
+                <p><strong>対応範囲の目安</strong><br>◎: プランに標準で含まれる包括的サービス / 〇: 基本サービス / △: 限定的な簡易サービス / —: 対象外</p>
+                <p>ご自身の施設に最適なプランがご不明な場合は、<a href="contact.html">お気軽にお問い合わせください。</a></p>
+            </div>
         </section>
 
     </main>
@@ -150,5 +243,6 @@
         <p style="font-size: 12px; margin: 0;">&copy; 2025 UNIVERSALCARE CONSULTING. All Rights Reserved.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>

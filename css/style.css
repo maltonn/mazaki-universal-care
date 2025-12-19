@@ -1,8 +1,8 @@
 /* 基本設定 */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans CJK JP', sans-serif;
+    font-family: 'Yu Mincho', '游明朝', 'Hiragino Mincho ProN', 'MS PMincho', serif;
     margin: 0;
-    color: #333;
+    color: #3B5474;
     background-color: #fff;
 }
 
@@ -26,7 +26,7 @@ a {
 
 .section-subtitle {
     text-align: center;
-    color: #f0a242;
+    color: #F67126;
     margin: 10px 0 60px 0;
     font-weight: bold;
 }
@@ -41,7 +41,14 @@ header {
     width: calc(100% - 80px);
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100; /* ハンバーガーメニューより手前に */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 header .logo h1 {
@@ -73,13 +80,47 @@ header nav ul li a {
 }
 
 header .btn-contact {
-    background-color: #f0a242;
+    background-color: #F67126;
     color: white;
     padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
     margin-left: 30px;
 }
+
+/* ハンバーガーメニューボタン */
+.hamburger-btn {
+    display: none; /* デスクトップでは非表示 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 150;
+    position: relative;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ddd;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.hamburger-btn.is-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-btn.is-open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-btn.is-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+.hamburger-btn.is-open span {
+    background-color: #3B5474;
+}
+
 
 /* メインビジュアル (Hero) */
 .hero {
@@ -128,12 +169,12 @@ header .btn-contact {
     margin: 0;
     font-size: 14px;
     font-weight: bold;
-    color: #333;
+    color: #3B5474;
 }
 
 .free-consultation span {
     display: inline-block;
-    background-color: #f0a242;
+    background-color: #F67126;
     color: white;
     padding: 10px 30px;
     border-radius: 50px;
@@ -220,8 +261,8 @@ header .btn-contact {
     display: inline-block;
     margin-top: 10px;
     font-size: 12px;
-    color: #f0a242;
-    border-bottom: 1px solid #f0a242;
+    color: #F67126;
+    border-bottom: 1px solid #F67126;
 }
 
 /* Serviceセクション */
@@ -260,12 +301,12 @@ header .btn-contact {
 
 .service-item .price strong {
     font-size: 28px;
-    color: #f0a242;
+    color: #F67126;
 }
 
 /* フッター */
 footer {
-    background-color: #333;
+    background-color: #3B5474;
     color: white;
     padding: 40px 5%;
     text-align: center;
@@ -296,4 +337,251 @@ footer nav ul li a {
 footer .copyright {
     font-size: 12px;
     margin: 0;
+}
+
+/* レスポンシブ対応 */
+
+/* タブレット向け */
+@media (max-width: 1024px) {
+    .section-container {
+        padding: 60px 5%;
+    }
+
+    header {
+        padding: 15px 20px;
+        width: calc(100% - 40px);
+    }
+
+    header nav ul li {
+        margin-left: 20px;
+    }
+
+    header .btn-contact {
+        margin-left: 20px;
+        padding: 10px 20px;
+    }
+
+    .hero-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 36px;
+    }
+
+    .free-consultation {
+        position: static;
+        transform: none;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #3B5474;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 220px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* モバイル向け */
+@media (max-width: 767px) {
+    .section-container {
+        padding: 50px 5%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 40px;
+    }
+
+    header {
+        position: fixed; /* スクロールしても追従 */
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        width: 100%;
+        padding: 10px 5%;
+        box-sizing: border-box;
+    }
+    
+    header .logo h1 {
+        color: #3B5474;
+        font-size: 18px;
+    }
+    
+    header .logo h1 a {
+        color: #3B5474;
+    }
+
+    .hamburger-btn {
+        display: block; /* モバイルで表示 */
+    }
+    
+    .hamburger-btn span {
+        background-color: #3B5474; /* 通常時の色 */
+    }
+
+    .header-nav-container {
+        display: none; /* デフォルトは非表示 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        z-index: 120;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-nav-container.is-open {
+        display: flex; /* is-openクラスで表示 */
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 20px 0;
+    }
+
+    header nav ul li a {
+        color: #3B5474;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    header .btn-contact {
+        margin-top: 20px;
+        margin-left: 0;
+        color: white;
+    }
+
+    main {
+        padding-top: 60px; /* 固定ヘッダー分の余白 */
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 5%;
+        flex-direction: column;
+    }
+
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-text .profile-description {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item {
+        padding: 25px;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+    }
+
+    footer nav ul li {
+        margin: 8px 0;
+    }
+
+    /* price.htmlのテーブルレスポンシブ対応 */
+    .price-table, .schedule-table {
+        border: 0;
+    }
+
+    .price-table thead, .schedule-table thead {
+        display: none;
+    }
+
+    .price-table tr, .schedule-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .price-table td, .schedule-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px dotted #ddd;
+        padding: 10px;
+        position: relative;
+        text-align: right;
+    }
+
+    .price-table td:last-child, .schedule-table td:last-child {
+        border-bottom: 0;
+    }
+
+    .price-table td::before, .schedule-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+        padding-right: 1em; /* Add some space between label and value */
+    }
+    
+    .price-table td.price {
+        text-align: right; /* 金額は右寄せのまま */
+        font-size: 20px;
+    }
+
+    .price-table td:first-child, .schedule-table td:first-child {
+        padding: 15px 10px;
+        text-align: left;
+        font-weight: bold;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ddd;
+    }
+    .price-table td:first-child::before, .schedule-table td:first-child::before {
+        display: none;
+    }
 }
